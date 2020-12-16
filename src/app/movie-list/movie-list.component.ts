@@ -30,7 +30,7 @@ export class MovieListComponent implements OnInit, OnChanges {
   }
 
   movieDetail(movie: object) {
-    this.router.navigate()
+    // this.router.navigate()
   }
 
   getMovieList() {
