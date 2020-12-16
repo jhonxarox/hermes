@@ -1,0 +1,18 @@
+<!-- <p>movie-list works!</p> -->
+<div style="padding: 13px;">
+    <mat-spinner *ngIf="dataLength === 0"></mat-spinner>
+
+    <mat-card *ngFor="let movie of movies" style="margin-top:10px;">
+        <mat-card-header>
+            <mat-card-title>{{ movie.title }}</mat-card-title>
+            <mat-card-subtitle><mat-icon>thumb_up_alt</mat-icon> {{ movie.like }} </mat-card-subtitle>
+            <mat-card-subtitle><mat-icon>schedule</mat-icon> {{ movie.showTime | date }} </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <img src="{{ movie.image }}" />
+        </mat-card-content>
+        <mat-card-actions>
+      <button mat-button (click)="movieDetail(movie)"> Detail</button>
+    </mat-card-actions>
+    </mat-card>
+</div>
